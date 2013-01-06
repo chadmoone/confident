@@ -10,6 +10,11 @@ class PeopleController < ApplicationController
     end
   end
 
+  def standings
+    @people = Person.all
+    @games = Game.all
+  end
+
   # GET /people/1
   # GET /people/1.json
   def show

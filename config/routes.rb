@@ -11,7 +11,11 @@ Confident::Application.routes.draw do
   resources :teams
 
 
-  resources :people
+  resources :people do
+    collection do
+      get :standings
+    end
+  end
 
 
   # The priority is based upon order of creation:
@@ -63,7 +67,7 @@ Confident::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'people#standings'
 
   # See how all your routes lay out with "rake routes"
 
