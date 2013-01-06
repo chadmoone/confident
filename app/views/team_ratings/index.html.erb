@@ -1,0 +1,27 @@
+<h1>Listing team_ratings</h1>
+
+<table>
+  <tr>
+    <th>Person</th>
+    <th>Team</th>
+    <th>Rating</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @team_ratings.each do |team_rating| %>
+  <tr>
+    <td><%= team_rating.person %></td>
+    <td><%= team_rating.team %></td>
+    <td><%= team_rating.rating %></td>
+    <td><%= link_to 'Show', team_rating %></td>
+    <td><%= link_to 'Edit', edit_team_rating_path(team_rating) %></td>
+    <td><%= link_to 'Destroy', team_rating, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Team rating', new_team_rating_path %>

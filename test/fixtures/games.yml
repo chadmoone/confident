@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  label: MyString
+  start: 2013-01-06 14:09:12
+  next_game_id: 
+
+two:
+  label: MyString
+  start: 2013-01-06 14:09:12
+  next_game_id: 

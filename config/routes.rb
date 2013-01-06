@@ -1,4 +1,19 @@
 Confident::Application.routes.draw do
+  resources :team_games
+
+
+  resources :games
+
+
+  resources :team_ratings
+
+
+  resources :teams
+
+
+  resources :people
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
