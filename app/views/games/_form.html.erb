@@ -25,15 +25,15 @@
   </div>
 
   <hr/>
-  <%= f.fields_for :team_games do |builder| %>
-    <div>
+  <div>
+    <%= f.fields_for :team_games do |builder| %>
       <fieldset>
         <%= builder.collection_select(:team_id, Team.all, :id, :name, {:include_blank => 'None'}) %><br/>
         <%= builder.label :score, "Score:" %>
         <%= builder.number_field :score %>
       </fieldset>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
   <hr>
   
   <div class="actions">

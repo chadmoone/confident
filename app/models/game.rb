@@ -8,6 +8,8 @@ class Game < ActiveRecord::Base
   has_many :seed_games, class_name: "Game", foreign_key: "next_game_id"
   belongs_to :next_game, class_name: "Game"
 
+  before_save :verify_teams
+
   def winner
     if over?
       team_games.first.team
@@ -22,5 +24,11 @@ class Game < ActiveRecord::Base
       return true if team_game.score.blank?
     end
     return true
+  end
+
+  def verify_teams
+    while team_games.length < 2
+      team_games.build()
+    end
   end
 end
