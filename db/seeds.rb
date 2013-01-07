@@ -273,20 +273,20 @@ kevin_shifflet.team_ratings << TeamRating.create([{rating: 12, team: patriots},
 
 
 
-superbowl = Game.create(label: "SuperBowl")
+superbowl = Game.create(label: "SuperBowl", start: "2013-02-03 18:30:00")
 
-afcc = Game.create(label: "AFC-C", next_game: superbowl)
-nfcc = Game.create(label: "NFC-C")
+afcc = Game.create(label: "AFC-C", next_game: superbowl, start: "2013-01-20 18:30:00")
+nfcc = Game.create(label: "NFC-C", next_game: superbowl, start: "2013-01-20 15:00:00")
 
-afcdiv1 = Game.create(label: "AFC-Div1", next_game:afcc)
-afcdiv2 = Game.create(label: "AFC-Div2", next_game:afcc)
-nfcdiv1 = Game.create(label: "NFC-Div1", next_game:nfcc)
-nfcdiv2 = Game.create(label: "NFC-Div2", next_game:nfcc)
+afcdiv1 = Game.create(label: "AFC-Div1", next_game:afcc, start: "2013-01-12 16:30:00")
+afcdiv2 = Game.create(label: "AFC-Div2", next_game:afcc, start: "2013-01-13 16:30:00")
+nfcdiv1 = Game.create(label: "NFC-Div1", next_game:nfcc, start: "2013-01-13 13:00:00")
+nfcdiv2 = Game.create(label: "NFC-Div2", next_game:nfcc, start: "2013-01-12 20:00:00")
 
-nfcwc1 = Game.create(label: "NFC-WC1", next_game: nfcdiv1)
-nfcwc2 = Game.create(label: "NFC-WC2", next_game: nfcdiv2)
-afcwc1 = Game.create(label: "AFC-WC1", next_game: afcdiv1)
-afcwc2 = Game.create(label: "AFC-WC2", next_game: afcdiv2)
+nfcwc1 = Game.create(label: "NFC-WC1", next_game: nfcdiv1, start: "2013-01-06 16:30:00")
+nfcwc2 = Game.create(label: "NFC-WC2", next_game: nfcdiv2, start: "2013-01-05 08:30:00")
+afcwc1 = Game.create(label: "AFC-WC1", next_game: afcdiv1, start: "2013-01-06 13:00:00 ")
+afcwc2 = Game.create(label: "AFC-WC2", next_game: afcdiv2, start: "2013-01-05 04:00:00")
 
 
 afcwc1.teams << [colts, ravens]
