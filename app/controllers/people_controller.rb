@@ -30,6 +30,9 @@ class PeopleController < ApplicationController
   # GET /people/new.json
   def new
     @person = Person.new
+    Team.all.each do |team|
+      @person.team_ratings.build({team: team})
+    end
 
     respond_to do |format|
       format.html # new.html.erb

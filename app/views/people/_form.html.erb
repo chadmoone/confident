@@ -15,6 +15,21 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+
+  <hr/>
+  <h3>Team Ratings</h3>
+  <div>
+    <fieldset>
+    <%= f.fields_for :team_ratings do |builder| %>
+      <field>
+        <%= builder.collection_select(:team_id, Team.all, :id, :name) %>
+        <%= builder.number_field :rating %>
+      </field>
+      <br/>
+    <% end %>
+    </fieldset>
+  </div>
+  <hr>
   <div class="actions">
     <%= f.submit %>
   </div>

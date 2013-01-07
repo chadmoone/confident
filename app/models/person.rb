@@ -1,7 +1,8 @@
 class Person < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :team_ratings_attributes
 
   has_many :team_ratings
+  accepts_nested_attributes_for :team_ratings
 
   def points_for_game(game)
     if game.winner
