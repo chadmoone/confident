@@ -12,7 +12,7 @@ class PeopleController < ApplicationController
 
   def standings
     @people = Person.all
-    @games = Game.all
+    @games = Game.order("start ASC").all
   end
 
   # GET /people/1

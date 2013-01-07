@@ -1,6 +1,6 @@
 <h1>Listing games</h1>
 
-<table>
+<table class="table table-bordered, table-striped">
   <tr>
     <th>Label</th>
     <th>Start</th>
@@ -14,7 +14,7 @@
   <tr>
     <td><%= game.label %></td>
     <td><%= game.start %></td>
-    <td><%= game.next_game_id %></td>
+    <td><%= game.next_game.label unless game.next_game.nil? %></td>
     <td><%= link_to 'Show', game %></td>
     <td><%= link_to 'Edit', edit_game_path(game) %></td>
     <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>

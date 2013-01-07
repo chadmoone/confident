@@ -12,10 +12,11 @@
     <% @people.each do |person| %>
     <tr>
       <td><%= person.name %></td>
+
       <% @games.each do |game| %>
-      <td> - </td>
+      <td><%= person.points_for_game(game) %></td>
       <% end -%>
-      <td>0</td>
+      <td><%= person.total_points %></td>
     </tr>
     <% end -%>
   </tbody>

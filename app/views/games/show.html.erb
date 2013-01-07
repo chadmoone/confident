@@ -12,7 +12,7 @@
 
 <p>
   <b>Next game:</b>
-  <%= @game.next_game_id %>
+  <%= @game.next_game.label unless @game.next_game.nil? %>
 </p>
 
 

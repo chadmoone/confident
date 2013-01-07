@@ -20,9 +20,22 @@
     <%= f.datetime_select :start %>
   </div>
   <div class="field">
-    <%= f.label :next_game_id %><br />
-    <%= f.text_field :next_game_id %>
+    <%= f.label "Next Game" %>
+    <%= collection_select(:game, :next_game_id, @all_games, :id, :label, {:include_blank => 'None'}) %>
   </div>
+
+  <hr/>
+  <%= f.fields_for :team_games do |builder| %>
+    <div>
+      <fieldset>
+        <%= builder.collection_select(:team_id, Team.all, :id, :name, {:include_blank => 'None'}) %><br/>
+        <%= builder.label :score, "Score:" %>
+        <%= builder.number_field :score %>
+      </fieldset>
+    </div>
+  <% end %>
+  <hr>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
