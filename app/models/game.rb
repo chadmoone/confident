@@ -21,7 +21,7 @@ class Game < ActiveRecord::Base
   def over?
     return false if team_games.count < 2
     team_games.each do |team_game|
-      return true if team_game.score.blank?
+      return false if team_game.score.nil?
     end
     return true
   end
