@@ -12,6 +12,7 @@ class PeopleController < ApplicationController
 
   def standings
     @people = Person.all
+    @people.sort! {|a,b| b.total_points <=> a.total_points}
     @games = Game.order("start ASC").all
   end
 
