@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130106190953) do
+ActiveRecord::Schema.define(:version => 20130108004244) do
 
   create_table "games", :force => true do |t|
     t.string   "label"
@@ -43,9 +43,9 @@ ActiveRecord::Schema.define(:version => 20130106190953) do
   create_table "team_ratings", :force => true do |t|
     t.integer  "person_id"
     t.integer  "team_id"
-    t.integer  "rating"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "rating",     :default => 0
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   add_index "team_ratings", ["person_id"], :name => "index_team_ratings_on_person_id"

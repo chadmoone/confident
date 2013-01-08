@@ -21,7 +21,7 @@
         <% @games.each do |game| %>
         <td><%= person.points_for_game(game) %></td>
         <% end -%>
-        <td><%= person.total_points %></td>
+        <td><%= person.total_points ||= 0 %></td>
       </tr>
       <% end -%>
     </tbody>
