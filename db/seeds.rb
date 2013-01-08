@@ -20,7 +20,7 @@ redskins = Team.create(name: "Redskins")
 bengals = Team.create(name: "Bengals")
 
 chad_moone = Person.create(name: "Chad Moone")
-chad_moone.team_ratings << TeamRating.create([{rating: 12, team: patriots},
+chad_moone.team_ratings.create([{rating: 12, team: patriots},
                                               {rating: 11, team: broncos},
                                               {rating: 10, team: redskins},
                                               {rating: 9, team: falcons},
@@ -34,7 +34,7 @@ chad_moone.team_ratings << TeamRating.create([{rating: 12, team: patriots},
                                               {rating: 1, team: vikings}])
 
 ryan_kerr = Person.create(name: "Ryan Kerr")
-ryan_kerr.team_ratings << TeamRating.create([{rating: 12, team: packers},
+ryan_kerr.team_ratings.create([{rating: 12, team: packers},
                                              {rating: 11, team: broncos},
                                              {rating: 10, team: patriots},
                                              {rating: 9, team: falcons},
@@ -48,7 +48,7 @@ ryan_kerr.team_ratings << TeamRating.create([{rating: 12, team: packers},
                                              {rating: 1, team: redskins}])
 
 matt_koppitch = Person.create(name: "Matt Koppitch")
-matt_koppitch.team_ratings << TeamRating.create([{rating: 12, team: broncos},
+matt_koppitch.team_ratings.create([{rating: 12, team: broncos},
                                                  {rating: 11, team: packers},
                                                  {rating: 10, team: forty_niners},
                                                  {rating: 9, team: falcons},
@@ -63,7 +63,7 @@ matt_koppitch.team_ratings << TeamRating.create([{rating: 12, team: broncos},
 
 
 billy_wallace = Person.create(name: "Billy Wallace")
-billy_wallace.team_ratings << TeamRating.create([{rating: 12, team: patriots},
+billy_wallace.team_ratings.create([{rating: 12, team: patriots},
                                                  {rating: 11, team: forty_niners},
                                                  {rating: 10, team: broncos},
                                                  {rating: 9, team: redskins},
@@ -78,7 +78,7 @@ billy_wallace.team_ratings << TeamRating.create([{rating: 12, team: patriots},
 
 
 arnie_aurellano = Person.create(name: "Arnie Aurellano")
-arnie_aurellano.team_ratings << TeamRating.create([{rating: 12, team: broncos},
+arnie_aurellano.team_ratings.create([{rating: 12, team: broncos},
                                                    {rating: 11, team: packers},
                                                    {rating: 10, team: patriots},
                                                    {rating: 9, team: texans},
@@ -93,7 +93,7 @@ arnie_aurellano.team_ratings << TeamRating.create([{rating: 12, team: broncos},
 
 
 mike_walsh = Person.create(name: "Mike Walsh")
-mike_walsh.team_ratings << TeamRating.create([{rating: 12, team: broncos},
+mike_walsh.team_ratings.create([{rating: 12, team: broncos},
                                               {rating: 11, team: forty_niners},
                                               {rating: 10, team: patriots},
                                               {rating: 9, team: falcons},
@@ -108,7 +108,7 @@ mike_walsh.team_ratings << TeamRating.create([{rating: 12, team: broncos},
 
 
 dan_shifflet = Person.create(name: "Dan Shifflet")
-dan_shifflet.team_ratings << TeamRating.create([{rating: 12, team: packers},
+dan_shifflet.team_ratings.create([{rating: 12, team: packers},
                                                 {rating: 11, team: texans},
                                                 {rating: 10, team: redskins},
                                                 {rating: 9, team: broncos},
@@ -123,7 +123,7 @@ dan_shifflet.team_ratings << TeamRating.create([{rating: 12, team: packers},
 
 
 mike_budney = Person.create(name: "Mike Budney")
-mike_budney.team_ratings << TeamRating.create([{rating: 12, team: broncos},
+mike_budney.team_ratings.create([{rating: 12, team: broncos},
                                                {rating: 11, team: packers},
                                                {rating: 10, team: patriots},
                                                {rating: 9, team: falcons},
@@ -138,7 +138,7 @@ mike_budney.team_ratings << TeamRating.create([{rating: 12, team: broncos},
 
 
 brad_snider = Person.create(name: "Brad Snider")
-brad_snider.team_ratings << TeamRating.create([{rating: 12, team: forty_niners},
+brad_snider.team_ratings.create([{rating: 12, team: forty_niners},
                                                {rating: 11, team: broncos},
                                                {rating: 10, team: patriots},
                                                {rating: 9, team: seahawks},
@@ -153,7 +153,7 @@ brad_snider.team_ratings << TeamRating.create([{rating: 12, team: forty_niners},
 
 
 john_hamelers = Person.create(name: "John Hamelers")
-john_hamelers.team_ratings << TeamRating.create([{rating: 12, team: patriots},
+john_hamelers.team_ratings.create([{rating: 12, team: patriots},
                                                  {rating: 11, team: forty_niners},
                                                  {rating: 10, team: seahawks},
                                                  {rating: 9, team: broncos},
@@ -168,7 +168,7 @@ john_hamelers.team_ratings << TeamRating.create([{rating: 12, team: patriots},
 
 
 jeff_weis = Person.create(name: "Jeff Weis")
-jeff_weis.team_ratings << TeamRating.create([{rating: 12, team: broncos},
+jeff_weis.team_ratings.create([{rating: 12, team: broncos},
                                              {rating: 11, team: forty_niners},
                                              {rating: 10, team: patriots},
                                              {rating: 9, team: packers},
@@ -183,7 +183,7 @@ jeff_weis.team_ratings << TeamRating.create([{rating: 12, team: broncos},
 
 
 daniel_common = Person.create(name: "Daniel Common")
-daniel_common.team_ratings << TeamRating.create([{rating: 12, team: patriots},
+daniel_common.team_ratings.create([{rating: 12, team: patriots},
                                                  {rating: 11, team: broncos},
                                                  {rating: 10, team: forty_niners},
                                                  {rating: 9, team: packers},
@@ -198,7 +198,7 @@ daniel_common.team_ratings << TeamRating.create([{rating: 12, team: patriots},
 
 
 ariel_aurellano = Person.create(name: "Ariel Aurellano")
-ariel_aurellano.team_ratings << TeamRating.create([{rating: 12, team: broncos},
+ariel_aurellano.team_ratings.create([{rating: 12, team: broncos},
                                                    {rating: 11, team: vikings},
                                                    {rating: 10, team: colts},
                                                    {rating: 9, team: patriots},
@@ -212,7 +212,7 @@ ariel_aurellano.team_ratings << TeamRating.create([{rating: 12, team: broncos},
                                                    {rating: 1, team: bengals}])
 
 kenny_rigoulot = Person.create(name: "Kenny Rigoulot")
-kenny_rigoulot.team_ratings << TeamRating.create([{rating: 12, team: patriots},
+kenny_rigoulot.team_ratings.create([{rating: 12, team: patriots},
                                                   {rating: 11, team: seahawks},
                                                   {rating: 10, team: broncos},
                                                   {rating: 9, team: forty_niners},
@@ -227,7 +227,7 @@ kenny_rigoulot.team_ratings << TeamRating.create([{rating: 12, team: patriots},
 
 
 bonnie_jo_steen = Person.create(name: "Bonnie Jo Steen")
-bonnie_jo_steen.team_ratings = TeamRating.create([{rating: 12, team: redskins},
+bonnie_jo_steen.team_ratings.create([{rating: 12, team: redskins},
                                                   {rating: 11, team: ravens},
                                                   {rating: 10, team: texans},
                                                   {rating: 9, team: forty_niners},
@@ -242,7 +242,7 @@ bonnie_jo_steen.team_ratings = TeamRating.create([{rating: 12, team: redskins},
 
 
 sam_steen = Person.create(name: "Sam Steen")
-sam_steen.team_ratings << TeamRating.create([{rating: 12, team: patriots},
+sam_steen.team_ratings.create([{rating: 12, team: patriots},
                                              {rating: 11, team: broncos},
                                              {rating: 10, team: packers},
                                              {rating: 9, team: seahawks},
@@ -257,7 +257,7 @@ sam_steen.team_ratings << TeamRating.create([{rating: 12, team: patriots},
 
 
 kevin_shifflet = Person.create(name: "Kevin Shifflet")
-kevin_shifflet.team_ratings << TeamRating.create([{rating: 12, team: patriots},
+kevin_shifflet.team_ratings.create([{rating: 12, team: patriots},
                                                   {rating: 11, team: forty_niners},
                                                   {rating: 10, team: broncos},
                                                   {rating: 9, team: falcons},
@@ -278,24 +278,12 @@ superbowl = Game.create(label: "SuperBowl", start: "2013-02-03 18:30:00")
 afcc = Game.create(label: "AFC-C", next_game: superbowl, start: "2013-01-20 18:30:00")
 nfcc = Game.create(label: "NFC-C", next_game: superbowl, start: "2013-01-20 15:00:00")
 
-afcdiv1 = Game.create(label: "AFC-Div1", next_game:afcc, start: "2013-01-12 16:30:00")
+afcdiv1 = Game.create(label: "AFC-Div1", next_game:afcc, start: "2013-01-12 16:30:00", teams: [broncos])
 afcdiv2 = Game.create(label: "AFC-Div2", next_game:afcc, start: "2013-01-13 16:30:00")
-nfcdiv1 = Game.create(label: "NFC-Div1", next_game:nfcc, start: "2013-01-13 13:00:00")
+nfcdiv1 = Game.create(label: "NFC-Div1", next_game:nfcc, start: "2013-01-13 13:00:00", teams: [falcons])
 nfcdiv2 = Game.create(label: "NFC-Div2", next_game:nfcc, start: "2013-01-12 20:00:00")
 
-nfcwc1 = Game.create(label: "NFC-WC1", next_game: nfcdiv1, start: "2013-01-06 16:30:00")
-nfcwc2 = Game.create(label: "NFC-WC2", next_game: nfcdiv2, start: "2013-01-05 08:30:00")
-afcwc1 = Game.create(label: "AFC-WC1", next_game: afcdiv1, start: "2013-01-06 13:00:00 ")
-afcwc2 = Game.create(label: "AFC-WC2", next_game: afcdiv2, start: "2013-01-05 04:00:00")
-
-
-afcwc1.teams << [colts, ravens]
-afcwc2.teams << [bengals, texans]
-nfcwc1.teams << [seahawks, redskins]
-nfcwc2.teams << [vikings, packers]
-
-afcdiv1.teams << broncos
-nfcdiv1.teams << falcons
-
-
-
+nfcwc1 = Game.create(label: "NFC-WC1", next_game: nfcdiv1, start: "2013-01-06 16:30:00", teams: [seahawks, redskins])
+nfcwc2 = Game.create(label: "NFC-WC2", next_game: nfcdiv2, start: "2013-01-05 08:30:00", teams: [vikings, packers])
+afcwc1 = Game.create(label: "AFC-WC1", next_game: afcdiv1, start: "2013-01-06 13:00:00 ", teams: [colts, ravens])
+afcwc2 = Game.create(label: "AFC-WC2", next_game: afcdiv2, start: "2013-01-05 04:00:00", teams: [bengals, texans])

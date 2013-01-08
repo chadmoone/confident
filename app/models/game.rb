@@ -1,5 +1,5 @@
 class Game < ActiveRecord::Base
-  attr_accessible :label, :next_game, :next_game_id, :start, :team_games_attributes
+  attr_accessible :label, :next_game, :next_game_id, :start, :team_games_attributes, :teams
 
   has_many :team_games, order: "score DESC"
   accepts_nested_attributes_for :team_games
