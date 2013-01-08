@@ -37,6 +37,7 @@
   <hr>
   
   <div class="actions">
-    <%= f.submit %>
+    <%= link_to 'Cancel', games_path, class: "btn" %>
+    <%= f.submit nil, class: "btn btn-primary" %>
   </div>
 <% end %>
