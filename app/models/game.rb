@@ -9,6 +9,7 @@ class Game < ActiveRecord::Base
   belongs_to :next_game, class_name: "Game"
 
   before_save :verify_teams
+  after_save :update_point_totals
 
   def winner
     if over?
@@ -30,5 +31,9 @@ class Game < ActiveRecord::Base
     while team_games.length < 2
       team_games.build()
     end
+  end
+
+  def update_point_totals
+    Person.update_totals
   end
 end

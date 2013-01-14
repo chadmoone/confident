@@ -1,5 +1,5 @@
 class Person < ActiveRecord::Base
-  attr_accessible :name, :team_ratings_attributes
+  attr_accessible :name, :team_ratings_attributes, :total_points
 
   has_many :team_ratings
   accepts_nested_attributes_for :team_ratings
@@ -12,11 +12,14 @@ class Person < ActiveRecord::Base
     end
   end
 
-  def total_points
-    points = 0
-    Game.all.each do |game|
-      points = points + points_for_game(game)
+  def self.update_totals
+    self.all.each do |p|
+      points = 0
+      Game.all.each do |game|
+        points = points + p.points_for_game(game)
+      end
+      p.total_points = points
+      p.save
     end
-    points
   end
 end
