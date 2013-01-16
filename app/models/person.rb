@@ -8,16 +8,22 @@ class Person < ActiveRecord::Base
   before_update :update_points
 
   def points_for_game(game)
-    if game.winner && winner_rating = team_ratings.where(team_id: game.winner.id).first
-      winner_rating.rating
+    if game.winner
+      winner_rating = team_ratings.where(team_id: game.winner.id).first
+      if winner_rating
+        return winner_rating.rating
+      else
+        return 0
+      end
     else
-      0
+      return 0
     end
   end
 
   def set_initial_points
     save
   end
+
   def update_points
     total_points = 0
     Game.all.each do |game|
