@@ -34,6 +34,6 @@ class Game < ActiveRecord::Base
   end
 
   def update_point_totals
-    Person.update_totals
+    Person.update_all
   end
 end

@@ -4,22 +4,28 @@ class Person < ActiveRecord::Base
   has_many :team_ratings
   accepts_nested_attributes_for :team_ratings
 
+  after_create :set_initial_points
+  before_update :update_points
+
   def points_for_game(game)
-    if game.winner
-      TeamRating.where(person_id: id, team_id: game.winner.id).first.rating
+    if game.winner && winner_rating = team_ratings.where(team_id: game.winner.id).first
+      winner_rating.rating
     else
       0
     end
   end
 
-  def self.update_totals
-    self.all.each do |p|
-      points = 0
-      Game.all.each do |game|
-        points = points + p.points_for_game(game)
-      end
-      p.total_points = points
-      p.save
+  def set_initial_points
+    save
+  end
+  def update_points
+    total_points = 0
+    Game.all.each do |game|
+      total_points += points_for_game(game)
     end
+  end
+
+  def self.update_all
+    self.all.each {|p| p.save}
   end
 end
