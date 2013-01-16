@@ -25,10 +25,11 @@ class Person < ActiveRecord::Base
   end
 
   def update_points
-    total_points = 0
+    points = 0
     Game.all.each do |game|
-      total_points += points_for_game(game)
+      points += points_for_game(game)
     end
+    self.total_points = points
   end
 
   def self.update_all
